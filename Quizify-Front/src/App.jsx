@@ -5,20 +5,23 @@ import { Toaster } from "react-hot-toast";
 // import Login from "./components/Login/Login";
 // import Home from "./components/Home/Home";
 // import DashBoard from "./components/DashBoard/DashBoard";
-import GetQuestions from "./components/GetQuestions/GetQuestions";
-import GetPollQuestions from "./components/GetPollQuestions/GetPollQuestions";
-import ShareModal from "./components/DashBoard/CreateQuiz/QuizModal/QuizModal";
+// import GetQuestions from "./components/GetQuestions/GetQuestions";
+// import GetPollQuestions from "./components/GetPollQuestions/GetPollQuestions";
+// import ShareModal from "./components/DashBoard/CreateQuiz/QuizModal/QuizModal";
 import Home2 from "./components/Home/Home2";
 import Login2 from "./components/Login/Login2";
 import Register2 from "./components/Register/Register2";
-import DashBoard2 from "./components/DashBoard/DashBoard2";
+// import DashBoard2 from "./components/DashBoard/DashBoard2";
 import UserProvider from "../context/UserContext";
-import PrivateRoute from "../context/PrivateRote";
-// import PublicRoute from "../context/PublicRoute";
+// import PrivateRoute from "../context/PrivateRote";
+import GetQuestions from "./components/GetQuestions/GetQuestions"; // Make sure this is correct
+// // import PublicRoute from "../context/PublicRoute";
 import NavBar from "./NavBar";
 import 'flowbite';
 import Quizzes from "./Quizzes";
 import CreateQuiz from "./components/DashBoard/CreateQuiz/CreateQuiz";
+import PlayQuiz from "./PlayQuiz";
+import Quiz from "./Quiz";
 
 
 
@@ -28,6 +31,7 @@ function App() {
     <>
       <UserProvider>
       <NavBar/>
+      <PlayQuiz/>
       <Toaster
         position="top-right"
         toastOptions={{
@@ -41,6 +45,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home2 />} />
         <Route path="/quizzes" element={<Quizzes />} />
+        <Route path="/quiz/:quizId" element={<Quiz />} />
         {/* <Route path="/register" element={<PublicRoute element={Register2}/>} /> */}
         <Route path="/register" element={<Register2 />} />
         {/* <Route path="/login" element={<Login />} /> */}
