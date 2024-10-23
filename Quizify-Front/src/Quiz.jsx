@@ -13,6 +13,7 @@ const Quiz = () => {
   const [score, setScore] = useState(0);
   const [submitted, setSubmitted] = useState(false);
 
+
   useEffect(() => {
     const fetchQuestions = async () => {
       try {
@@ -162,3 +163,4 @@ export default Quiz;
 // };
 
 // export default Quiz;
+

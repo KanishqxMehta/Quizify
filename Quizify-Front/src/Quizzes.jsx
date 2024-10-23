@@ -25,6 +25,7 @@ export default function Quizzes() {
     navigate(`/quiz/${quizId}`); // Navigate to quiz start page with quiz ID
   };
 
+  
   return (
     <div className="p-6">
       {/* Responsive grid layout for QuizCards */}

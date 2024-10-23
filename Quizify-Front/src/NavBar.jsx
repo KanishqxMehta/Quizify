@@ -10,6 +10,7 @@ export default function NavBar() {
     logout(); // Call the logout function from the context
     navigate("/login"); // Redirect the user to the login page after logout
   };
+  
 
   return (
     <>

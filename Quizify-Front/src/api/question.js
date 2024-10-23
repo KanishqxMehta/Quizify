@@ -74,6 +74,7 @@ export const evaluationCount = (id, isCorrect) => {
   }
 };
 
+
 export const updatedQuestion = ({ quizId, questions }) => {
   console.log("questions", questions);
 

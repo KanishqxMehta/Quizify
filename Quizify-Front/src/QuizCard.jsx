@@ -29,3 +29,4 @@ export default function QuizCard({ title, type, date, impressions, onStart }) {
     </div>
   );
 }
+

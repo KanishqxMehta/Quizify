@@ -65,6 +65,8 @@ export const deleteQuiz = async (quizId) => {
   }
 };
 
+
+
 // Method to increment quiz impressions
 export const incrementQuizImpressions = async (quizId) => {
   try {
@@ -83,6 +85,7 @@ export const incrementQuizImpressions = async (quizId) => {
     throw new Error(e.response ? e.response.data.message : e.message);
   }
 };
+
 
 // export const getQuizByid = async() => {
 //     try {

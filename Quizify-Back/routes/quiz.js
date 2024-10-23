@@ -73,12 +73,13 @@ router.delete("/delete", authMiddleware, async (req, res) => {
   }
 });
 
-router.post("/increment-impressions/:id", async (req, res) => {
+
+router.patch("/increment-impressions/:id", async (req, res) => {
   const { id } = req.params;
   console.log("quiz.js", id);
 
   try {
-    const quiz = await Quiz.findByIdAndUpdate(id);
+    const quiz = await Quiz.findById(id);
     console.log("quiz.js", quiz);
 
     if (!quiz) {
@@ -96,4 +97,6 @@ router.post("/increment-impressions/:id", async (req, res) => {
     res.status(500).json({ message: "Error incrementing impressions", error });
   }
 });
+
+
 export default router;
