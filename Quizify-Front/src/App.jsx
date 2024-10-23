@@ -20,7 +20,6 @@ import NavBar from "./NavBar";
 import 'flowbite';
 import Quizzes from "./Quizzes";
 import CreateQuiz from "./components/DashBoard/CreateQuiz/CreateQuiz";
-import PlayQuiz from "./PlayQuiz";
 import Quiz from "./Quiz";
 
 
@@ -31,7 +30,6 @@ function App() {
     <>
       <UserProvider>
       <NavBar/>
-      <PlayQuiz/>
       <Toaster
         position="top-right"
         toastOptions={{

@@ -65,6 +65,25 @@ export const deleteQuiz = async (quizId) => {
   }
 };
 
+// Method to increment quiz impressions
+export const incrementQuizImpressions = async (quizId) => {
+  try {
+    const response = await axios.patch(
+      `${BACKEND_URL}/api/quiz/increment-impressions/${quizId}`,
+      {},
+      {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      }
+    );
+    return response.data;
+  } catch (e) {
+    console.error("Error details:", e.response ? e.response.data : e.message);
+    throw new Error(e.response ? e.response.data.message : e.message);
+  }
+};
+
 // export const getQuizByid = async() => {
 //     try {
 //       const response = await axios.get(`${BACKEND_URL}/api/quiz`);

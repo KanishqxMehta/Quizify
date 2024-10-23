@@ -36,6 +36,7 @@ export default function Quizzes() {
               title={quiz.title}
               type={quiz.type}
               date={quiz.date}
+              impressions={quiz.impressions}
               onStart={() => handleStartQuiz(quiz._id)}
             />
           ))

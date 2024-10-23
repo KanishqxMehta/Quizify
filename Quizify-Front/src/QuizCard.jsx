@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function QuizCard({ title, type, date, onStart }) {
+export default function QuizCard({ title, type, date, impressions, onStart }) {
   return (
     <div className="p-4">
       <div className="block rounded-lg bg-gray-900 text-center text-gray-200 shadow-lg dark:bg-gray-800 dark:text-white">
@@ -23,7 +23,7 @@ export default function QuizCard({ title, type, date, onStart }) {
           </button>
         </div>
         <div className="border-t-2 border-gray-700 px-6 py-3 text-gray-400 dark:text-gray-500">
-          {new Date(date).toLocaleDateString()}
+           Impressions: {impressions}
         </div>
       </div>
     </div>
